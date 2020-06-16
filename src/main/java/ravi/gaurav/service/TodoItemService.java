@@ -3,7 +3,7 @@ package ravi.gaurav.service;
 import ravi.gaurav.model.TodoData;
 import ravi.gaurav.model.TodoItem;
 
-public interface TodoService {
+public interface TodoItemService {
     void addItem(TodoItem todoItem);
 
     void removeItem(int id);

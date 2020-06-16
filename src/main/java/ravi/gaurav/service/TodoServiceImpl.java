@@ -5,7 +5,7 @@ import ravi.gaurav.model.TodoData;
 import ravi.gaurav.model.TodoItem;
 
 @Service
-public class TodoServiceImpl implements TodoService {
+public class TodoServiceImpl implements TodoItemService {
 
     private final TodoData todoData = new TodoData();
 
