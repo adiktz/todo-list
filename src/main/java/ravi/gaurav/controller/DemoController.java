@@ -13,4 +13,10 @@ public class DemoController {
     public String hello() {
         return "hello";
     }
+
+    // http://localhost:8080/Todo-List/welcome
+    @GetMapping("welcome")
+    public String welcome() {
+        return "welcome";
+    }
 }
