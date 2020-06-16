@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import ravi.gaurav.model.TodoData;
 import ravi.gaurav.model.TodoItem;
 import ravi.gaurav.service.TodoItemService;
@@ -51,6 +52,13 @@ public class TodoItemController {
     public String processItem(@ModelAttribute(AttributeNames.TODO_ITEM) TodoItem todoItem) {
         log.info("todoItem from form = {}", todoItem);
         todoItemService.addItem(todoItem);
+        return "redirect:/" + Mappings.ITEMS;
+    }
+
+    @GetMapping(Mappings.DELETE_ITEM)
+    public String deleteItem(@RequestParam("id") int id) {
+        log.info("id = {}", id);
+        todoItemService.removeItem(id);
         return "redirect:/" + Mappings.ITEMS;
     }
 }
