@@ -11,7 +11,8 @@
     <title>Welcome To ToDo</title>
 </head>
 <body>
-<h1>Hello World! From ${user}</h1>
+<h1>${helloMessage}</h1>
 <h2>${welcomeMessage}</h2>
+
 </body>
 </html>
