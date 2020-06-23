@@ -25,10 +25,10 @@
             <th>Deadline</th>
         </tr>
         <tr>
-            <td><c:out value="${item.id}"/></td>
-            <td><c:out value="${item.title}"/></td>
-            <td><c:out value="${item.details}"/></td>
-            <td><c:out value="${item.deadline}"/></td>
+            <td><c:out value="${todoItem.id}"/></td>
+            <td><c:out value="${todoItem.title}"/></td>
+            <td><c:out value="${todoItem.details}"/></td>
+            <td><c:out value="${todoItem.deadline}"/></td>
         </tr>
     </table>
     <c:url var="itemsUrl" value="${Mappings.ITEMS}"/>
